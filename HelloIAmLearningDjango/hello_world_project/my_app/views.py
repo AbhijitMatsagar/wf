@@ -4,4 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('Hello, I am learning Django!')
+    return render(request,'index.html')
+
+def about(request):
+    return render(request,'about.html')

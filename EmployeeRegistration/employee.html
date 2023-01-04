@@ -16,50 +16,18 @@
     <link rel="stylesheet" href="employee.css" type="text/css" />
     <script src="employee.js"></script>
   </head>
-  <body onload="document.registration.userid.focus();" bgcolor="orange">
+  <body>
     <h1>Employee Registration Form</h1>
-    <form name="registration" onSubmit="return formValidation();">
-      <ul>
-        <li><label for="first">First Name:</label></li>
-        <li><input type="text" name="first" size="50" /></li>
-        <li><label for="last">Last Name:</label></li>
-        <li><input type="text" name="last" size="50" /></li>
-        <li><label for="empid">Employee id:</label></li>
-        <li><input type="text" name="empid" size="50" /></li>
-        <li><label for="birth">Birth of date:</label></li>
-        <li><input type="date" id="birth" name="birth" /></li>
-        <li><label for="address">Address:</label></li>
-        <li><input type="text" name="address" size="50" /></li>
-        <li><label for="country">Country:</label></li>
-        <li>
-          <select name="country">
-            <option selected="" value="Default">
-              (Please select a country)
-            </option>
-            <option value="AF">Australia</option>
-            <option value="AL">Canada</option>
-            <option value="DZ">India</option>
-            <option value="AS">Russia</option>
-            <option value="AD">USA</option>
-          </select>
-        </li>
-        <li><label for="no">Contact no:</label></li>
-        <li><input type="number" id="" name="no" /></li>
-        <li><label for="jdate">Date of joining:</label></li>
-        <li><input type="date" id="" name="jdate" /></li>
-        <li><label for="email">Email:</label></li>
-        <li><input type="text" name="email" size="50" /></li>
-        <li><label id="gender">Gender:</label></li>
-        <li>
-          <input type="radio" name="male" value="Male" /><span>Male</span>
-        </li>
-        <li>
-          <input type="radio" name="female" value="Female" /><span>Female</span>
-        </li>
-        <li><label for="salary">salary:</label></li>
-        <li><input type="number" id="salary" name="salary" /></li>
-        <li><input type="submit" name="submit" value="Submit" /></li>
-      </ul>
-    </form>
+    <form onsubmit="return validateForm()">
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name"><br>
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob"><br>
+      <label for="joining_date">Joining Date:</label><br>
+      <input type="date" id="joining_date" name="joining_date"><br>
+      <label for="salary">Salary:</label><br>
+      <input type="number" id="salary" name="salary"><br><br>
+      <input type="submit" value="Submit">
+    </form> 
   </body>
 </html>
