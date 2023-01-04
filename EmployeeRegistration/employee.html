@@ -1,33 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>
-      JavaScript Form Validation using a sample Employee registration form
-    </title>
-    <meta
-      name="keywords"
-      content="example, JavaScript Form Validation, Sample registration form"
-    />
-    <meta
-      name="description"
-      content="This document is an example of JavaScript Form Validation using a sample registration form. "
-    />
-    <link rel="stylesheet" href="employee.css" type="text/css" />
-    <script src="employee.js"></script>
-  </head>
-  <body>
-    <h1>Employee Registration Form</h1>
-    <form onsubmit="return validateForm()">
-      <label for="name">Name:</label><br>
-      <input type="text" id="name" name="name"><br>
-      <label for="dob">Date of Birth:</label><br>
-      <input type="date" id="dob" name="dob"><br>
-      <label for="joining_date">Joining Date:</label><br>
-      <input type="date" id="joining_date" name="joining_date"><br>
-      <label for="salary">Salary:</label><br>
-      <input type="number" id="salary" name="salary"><br><br>
-      <input type="submit" value="Submit">
-    </form> 
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="employee.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form action="#">
+            <label for="">Date of Birth</label>
+            <input type="date" name="" id="dob">
+            <br>
+
+            <label for="">Date of Joining</label>
+            <input type="date" id="doj">
+            <br>
+
+            <label for="">salary:</label>
+            <input type="number" name="" id="salary">
+            <br>
+
+            <input type="submit" onclick="validate_form()">
+        </form>
+    </div>
+</body>
 </html>

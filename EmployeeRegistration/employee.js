@@ -1,33 +1,23 @@
-function validateForm() {
-  // Get the DOB, joining date, and salary fields
-  var dob = document.getElementById("dob").value;
-  var joiningDate = document.getElementById("joining_date").value;
-  var salary = document.getElementById("salary").value;
+            function validate_form(){
+                var dob = document.getElementById('dob').value;
+                dob = new Date(dob);
 
-  // Check if the DOB is a valid date
-  if (!isValidDate(dob)) {
-    alert("Please enter a valid date of birth.");
-    return false;
-  }
+                var doj = document.getElementById('doj').value;
+                doj=new Date(doj)
 
-  // Check if the joining date is a valid date
-  if (!isValidDate(joiningDate)) {
-    alert("Please enter a valid joining date.");
-    return false;
-  }
+                var salary = document.getElementById('salary').value;
 
-  // Check if the joining date is after the DOB
-  if (joiningDate < dob) {
-    alert("The joining date cannot be before the date of birth.");
-    return false;
-  }
+                curr_date = new Date();
 
-  // Check if the salary is a positive number
-  if (salary <= 0) {
-    alert("Please enter a valid salary.");
-    return false;
-  }
-
-  // If all validation checks pass, submit the form
-  return true;
-}
+                if(dob >= curr_date){
+                    alert("Invalid Date of birth");
+                    return false;
+                }else if(doj <= dob){
+                    alert("Invalid date of joining");
+                    return false;
+                }else if(salary <= 0){
+                    alert("Invalid salary");
+                    return false;
+                }
+                return true;
+            }
